@@ -59,6 +59,7 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
 
   return (
     <AbsoluteFill style={container}>
+      <Audio volume={0.5} src={staticFile('floating-abstract-142819.mp3')}/>
       <Series>
         <Series.Sequence durationInFrames={100}>
           <Rings outProgress={logoOut}></Rings>
