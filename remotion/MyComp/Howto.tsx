@@ -20,8 +20,16 @@ export const Howto: React.FC = () => {
       damping: 200,
     },
   });
+  const progress1 = spring({
+    fps,
+    frame: frame + 10,
+    config: {
+      damping: 200,
+    },
+  });
 
-  const translateY = interpolate(progress, [0, 1], [600, 0]);
+  const translateY = interpolate(progress, [0, 0.5, 1], [600, 0, -600]);
+  const translate_Y = interpolate(progress1, [0, 0.5, 1], [800, 0, -800]);
 
   return (
     <Container
@@ -35,11 +43,19 @@ export const Howto: React.FC = () => {
     >
       <div
         style={{
+          color: "#f5ad43",
           transform: `translateY(${translateY}px)`,
         }}
       >
         Seeking directions to our location?
         <br />
+      </div>
+      <div
+        style={{
+          color: "#5757f5",
+          transform: `translateY(${translate_Y}px)`,
+        }}
+      >
         We offer an interactive demo for your convenience.
       </div>
     </Container>
