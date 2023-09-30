@@ -11,6 +11,7 @@ const Container = styled.div`
 const Title = styled.div`
   font-weight: 700;
   font-family: -apple-system, BlinkMacSystemFont;
+
   font-size: 30px;
   margin-bottom: 5px;
 `;
@@ -18,6 +19,7 @@ const Title = styled.div`
 const YarnCreateVideo = styled.div`
   font-weight: 700;
   font-size: 60px;
+  padding: 50px;
   font-family: -apple-system, BlinkMacSystemFont;
   background: linear-gradient(to right, #4290f5, #42e9f5);
   -webkit-background-clip: text;

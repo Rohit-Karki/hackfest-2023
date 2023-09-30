@@ -4,9 +4,10 @@ import styled from "styled-components";
 const Container = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
   text-align: center;
+  color: #fff;
 `;
 
 export const Howto: React.FC = () => {
@@ -37,9 +38,9 @@ export const Howto: React.FC = () => {
           transform: `translateY(${translateY}px)`,
         }}
       >
-        How to reach to us?
+        Seeking directions to our location?
         <br />
-        Want some interactive demo of our location?
+        We offer an interactive demo for your convenience.
       </div>
     </Container>
   );

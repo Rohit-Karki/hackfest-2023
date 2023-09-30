@@ -24,6 +24,8 @@ import { Gradient } from "./Gradient";
 import { TypeWriter } from "./Typewriter";
 import { Howto } from "./Howto";
 import { Transition } from "./utils/Transition";
+import { BestQualities } from "./BestQualities";
+import { Pricing } from "./Pricing";
 
 loadFont();
 
@@ -77,16 +79,13 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
         <Series.Sequence durationInFrames={500}>
           <Transition type="out">
             <AbsoluteFill>
-              <Series.Sequence
-                // from={transitionStart + transitionDuration / 2}
-                durationInFrames={60}
-              >
-                <TextFade>
+              <Series.Sequence durationInFrames={60}>
+                {/* <TextFade>
                   <h1 style={titleStyle}>{title}</h1>
-                </TextFade>
-                {/* <AbsoluteFill>
-                <Howto />
-              </AbsoluteFill> */}
+                </TextFade> */}
+                <AbsoluteFill>
+                  <Howto />
+                </AbsoluteFill>
               </Series.Sequence>
               <Audio src={staticFile("Welcome_to_a_wor_1.wav")} />
 
@@ -110,12 +109,21 @@ export const Main = ({ title }: z.infer<typeof CompositionProps>) => {
             />
           </AbsoluteFill>
         </Series.Sequence>
-        {/* <Series.Sequence durationInFrames={80}>
-              
-        </Series.Sequence> */}
-        <Series.Sequence durationInFrames={100}>
+
+        <Series.Sequence durationInFrames={150}>
+          <Transition type="out">
+            <BestQualities />
+          </Transition>
+        </Series.Sequence>
+
+        {/* <Series.Sequence durationInFrames={100}>
           <Transition type="out">
             <MyTitleComponent />
+          </Transition>
+        </Series.Sequence> */}
+        <Series.Sequence durationInFrames={200}>
+          <Transition type="out">
+            <Pricing />
           </Transition>
         </Series.Sequence>
         <Series.Sequence durationInFrames={200}>
