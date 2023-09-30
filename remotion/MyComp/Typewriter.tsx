@@ -24,7 +24,7 @@ export const TypeWriter = () => {
       <Sequence durationInFrames={100}>
         <AbsoluteFill
           style={{
-            backgroundColor: "gray",
+            backgroundColor: "white",
             justifyContent: "center",
             alignItems: "center",
           }}

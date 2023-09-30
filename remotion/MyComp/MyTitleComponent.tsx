@@ -1,4 +1,11 @@
-import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
+import {
+  AbsoluteFill,
+  Sequence,
+  interpolate,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { TextFade } from "./TextFade";
 
 const Title: React.FC<{ title: string }> = ({ title }) => {
@@ -13,6 +20,19 @@ const Title: React.FC<{ title: string }> = ({ title }) => {
 };
 
 export const MyTitleComponent = () => {
+  const { fps } = useVideoConfig();
+  const frame = useCurrentFrame();
+
+  const progress = spring({
+    fps,
+    frame,
+    config: {
+      damping: 200,
+    },
+    durationInFrames: 100,
+  });
+
+  // const translateY = interpolate()
   return (
     <AbsoluteFill>
       <Sequence durationInFrames={100}>

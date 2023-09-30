@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
+  opacity: 0.2;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -16,7 +17,8 @@ const Title = styled.div`
 
 const Link = styled.div`
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
+  padding-left: 20px;
   font-family: -apple-system, BlinkMacSystemFont;
   background: linear-gradient(to right, #f5ad43, #fd764a);
   -webkit-background-clip: text;

@@ -3,7 +3,7 @@ import { AbsoluteFill, useCurrentFrame } from "remotion";
 
 export const Typeface: React.FC = () => {
   const frame = Math.max(0, useCurrentFrame() - 20);
-  const letters = "Experience the\nthrilling Experience\nof Pokhara"
+  const letters = "Explore the\nEnthralling Experience\nOf Pokhara"
     .substring(0, frame)
     .split("\n");
 
@@ -12,11 +12,11 @@ export const Typeface: React.FC = () => {
       style={{
         justifyContent: "center",
         alignItems: "center",
-        fontSize: 120,
+        fontSize: 100,
         color: "white",
         fontFamily: "Arial",
         fontWeight: "bolder",
-        lineHeight: 0.85,
+        lineHeight: 0.9,
       }}
     >
       <div>
